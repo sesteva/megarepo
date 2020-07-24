@@ -65,5 +65,5 @@ common/autoinstallers/*/.npmrc
 **/.rush/temp/
 
 # Apps 
-**/apps/public/build/
-**/apps/node_modules/
+**/apps/**/public/build/
+**/apps/**/node_modules/

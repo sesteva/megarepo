@@ -19,11 +19,13 @@
    * will recalculate all version selections.
    */
   "preferredVersions": {
-    /**
-     * When someone asks for "^1.0.0" make sure they get "1.2.3" when working in this repo,
-     * instead of the latest version.
-     */
-    // "some-library": "1.2.3"
+    "svelte": "^3.0.0",
+    "svelte-check": "^0.1.0",
+    "svelte-preprocess": "^4.0.0",
+    "@rollup/plugin-typescript": "^4.0.0",
+    "typescript": "^3.9.3",
+    "tslib": "^2.0.0",
+    "@tsconfig/svelte": "^1.0.0"
   },
 
   /**
