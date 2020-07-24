@@ -3,10 +3,12 @@
 Prerequisites
 
 - Node v 12-14
+- NVM (nvm install --lts)
 - Yarn or NPM
 
 Install PNPM and RUSHJS
 
+    nvm use
     yarn global add pnpm @microsfot/rush
 
 Clone the repo
