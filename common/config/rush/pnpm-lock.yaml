@@ -3,6 +3,7 @@ dependencies:
   '@rollup/plugin-node-resolve': 8.4.0_rollup@2.23.0
   '@rollup/plugin-typescript': 4.1.2_d508d998c8e6588bf77175f7541372d0
   '@rush-temp/svelte-app': 'file:projects/svelte-app.tgz'
+  '@rush-temp/ui-core': 'file:projects/ui-core.tgz'
   '@tsconfig/svelte': 1.0.3
   rollup: 2.23.0
   rollup-plugin-livereload: 1.3.0
@@ -1123,14 +1124,27 @@ packages:
     dev: false
     name: '@rush-temp/svelte-app'
     resolution:
-      integrity: sha512-Tipg03KD1XB4ydpAxjzZyad765ZVx2zPf8YBWMsFmRdetHXsZ8N2U9mg6bUmOggp/1TCFZ3okvG9LuRO3jzBdg==
+      integrity: sha512-2n+1awOJx1ti8lQcsQVUTJx0ycVDxnM8RlFC1/LGTo7XuR2CMrKCX96gvifgt63sTjXldSPGteazUV9B/qgzyg==
       tarball: 'file:projects/svelte-app.tgz'
+    version: 0.0.0
+  'file:projects/ui-core.tgz':
+    dependencies:
+      '@rollup/plugin-node-resolve': 8.4.0_rollup@2.23.0
+      rollup: 2.23.0
+      rollup-plugin-svelte: 5.2.3_rollup@2.23.0+svelte@3.24.0
+      svelte: 3.24.0
+    dev: false
+    name: '@rush-temp/ui-core'
+    resolution:
+      integrity: sha512-DfJdD4kHUKROiTMC5+UB1ayksu5jYfLk9mPDUsX3RcekfEwMM+s4qhgGvkLcF1PF8mJjupx1we3fZilC3Bw+8w==
+      tarball: 'file:projects/ui-core.tgz'
     version: 0.0.0
 specifiers:
   '@rollup/plugin-commonjs': ^12.0.0
   '@rollup/plugin-node-resolve': ^8.0.0
   '@rollup/plugin-typescript': ^4.0.0
   '@rush-temp/svelte-app': 'file:./projects/svelte-app.tgz'
+  '@rush-temp/ui-core': 'file:./projects/ui-core.tgz'
   '@tsconfig/svelte': ^1.0.0
   rollup: ^2.3.4
   rollup-plugin-livereload: ^1.0.0
