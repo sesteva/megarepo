@@ -3,7 +3,7 @@
 Prerequisites
 
 - Node v 12-14
-- NVM (nvm install --lts)
+- NVM (nvm install --lts) https://github.com/nvm-sh/nvm#nvmrc
 - Yarn or NPM
 
 Install PNPM and RUSHJS
@@ -24,6 +24,14 @@ Install deps
 
     cd app/svelte-app
     rushx dev
+
+## Working on the shared UI core component and Storybook
+
+    cd tools/storybook
+    rushx start
+
+    cd libs/ui-core
+    rushx build:watch
 
 ## Things you should know
 
@@ -53,3 +61,15 @@ If you need a devDep, add --dev flag
 Make sure you have defined the version number in both package.json files.
 
     rush update --full
+
+## Additional Info on the Monorepo tooling
+
+https://rushjs.io
+https://rushstack.io/pages/contributing/get_started/
+
+## TODO
+
+- e2e project
+- create custom command to build watch and start storybook
+- Eslint config https://www.npmjs.com/package/@rushstack/eslint-config
+- CI setup https://rushjs.io/pages/maintainer/enabling_ci_builds/

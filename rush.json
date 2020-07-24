@@ -61,7 +61,7 @@
      * The default value is false to avoid legacy compatibility issues.
      * It is strongly recommended to set strictPeerDependencies=true.
      */
-    "strictPeerDependencies": true
+    // "strictPeerDependencies": true
     /**
      * Configures the strategy used to select versions during installation.
      *
@@ -371,11 +371,18 @@
   "projects": [
     {
       "packageName": "svelte-app",
-      "projectFolder": "apps/svelte-app"
+      "projectFolder": "apps/svelte-app",
+      "reviewCategory": "app"
     },
     {
       "packageName": "@scx/ui-core",
-      "projectFolder": "libs/ui-core"
+      "projectFolder": "libs/ui-core",
+      "reviewCategory": "shared"
+    },
+    {
+      "packageName": "storybook",
+      "projectFolder": "tools/storybook",
+      "reviewCategory": "tools"
     }
     // {
     //   /**

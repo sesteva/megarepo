@@ -1,0 +1,21 @@
+{
+  "name": "storybook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/svelte": "^5.3.19",
+    "babel-loader": "^8.1.0",
+    "svelte": "^3.24.0",
+    "svelte-loader": "^2.13.6",
+    "@scx/ui-core": "0.0.1"
+  },
+  "scripts": {
+    "dev": "start-storybook -p 6006",
+    "build": "build-storybook"
+  }
+}
