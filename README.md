@@ -33,6 +33,12 @@ Install deps
     cd libs/ui-core
     rushx build:watch
 
+    TODO: create command to do it automatically
+
+## Working on the Svelte App, live reloading shared components changes and running the E2E continously
+
+    TODO
+
 ## Things you should know
 
 1. The project is setup to make sure all projects use the same version of the libraries.
@@ -70,6 +76,9 @@ https://rushstack.io/pages/contributing/get_started/
 ## TODO
 
 - e2e project
+- jest testing library svelte
 - create custom command to build watch and start storybook
+- create custom command to run app and e2e
+- use TS for everything
 - Eslint config https://www.npmjs.com/package/@rushstack/eslint-config
 - CI setup https://rushjs.io/pages/maintainer/enabling_ci_builds/

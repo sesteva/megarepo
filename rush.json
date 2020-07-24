@@ -383,6 +383,11 @@
       "packageName": "storybook",
       "projectFolder": "tools/storybook",
       "reviewCategory": "tools"
+    },
+    {
+      "packageName": "svelte-app-e2e",
+      "projectFolder": "e2e/svelte-app-e2e",
+      "reviewCategory": "e2e"
     }
     // {
     //   /**
