@@ -6,10 +6,17 @@ Prerequisites
 - NVM (nvm install --lts) https://github.com/nvm-sh/nvm#nvmrc
 - Yarn or NPM
 
-Install PNPM and RUSHJS
+Setup the correct version of Node inside the project's folder
 
     nvm use
-    yarn global add pnpm @microsfot/rush
+
+or for example
+
+    nvm alias default 12.8
+
+Install PNPM and RUSHJS
+
+yarn global add pnpm @microsfot/rush
 
 Clone the repo
 
@@ -73,12 +80,18 @@ Make sure you have defined the version number in both package.json files.
 https://rushjs.io
 https://rushstack.io/pages/contributing/get_started/
 
+## Suggestions ? Conventions ?
+
+Use HSL insted of HEX to define colors
+
 ## TODO
 
-- e2e project
 - jest testing library svelte
 - create custom command to build watch and start storybook
 - create custom command to run app and e2e
-- use TS for everything
+- use TS for everything (example I should be able to see options values for Flex component )
+- form validation with Yup
+- add angular app
 - Eslint config https://www.npmjs.com/package/@rushstack/eslint-config
 - CI setup https://rushjs.io/pages/maintainer/enabling_ci_builds/
+- folder tools/templates with command to generate new component, new app
