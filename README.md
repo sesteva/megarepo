@@ -27,24 +27,13 @@ Install deps
 
     rush update
 
-## Start the Svelte App
+## Tips
 
-    cd app/svelte-app
-    rushx dev
+VS Code highlights JSON comments as errors by default, but it provides an optional “JSON with comments” mode. To enable this, add this line to your settings.json in VS Code:
 
-## Working on the shared UI core component and Storybook
+        "files.associations": { "*.json": "jsonc" }
 
-    cd tools/storybook
-    rushx start
-
-    cd libs/ui-core
-    rushx build:watch
-
-    TODO: create command to do it automatically
-
-## Working on the Svelte App, live reloading shared components changes and running the E2E continously
-
-    TODO
+Install Svelte VSCode extension and code snippets
 
 ## Things you should know
 
@@ -52,6 +41,45 @@ Install deps
    There is a way to provide exceptions via configuration.
 
 2. Avoid using npm or yarn or pnpm directly. Instead using rush cli.
+
+## Dev Workflows
+
+## Working with shared UI, Storybook, Svelte App and Svelte App E2E
+
+The practice of TDD requires as to run our unit tests continuosly.
+What if we would like to take the same approach on different tools?
+
+Having our shared component rebuild automatically is a must have. This removes friction if we want to create a reusable component as there is not additional repo or cognitive change cost.
+
+If we change or create a reusable component, we might want to have Storybook with live reload so we can visualize variations.
+
+It would be fantastic if we know we have not broken any of the essentials flows of the app.
+Having E2E tests continously running with Cypress console might come useful.
+
+In order to do it, a single command at the root of the project is all we need:
+
+        rush dev
+
+if you would like to create additional flows, checkout the 'common/config/rush/command-line.json' and the documentation https://rushjs.io/pages/configs/command-line_json/
+
+## Start only the Svelte App
+
+    cd app/svelte-app
+    rushx dev
+
+## Working on the shared UI core component and Storybook
+
+Terminal 1:
+
+    cd tools/storybook
+    rushx dev
+
+Terminal 2:
+
+    cd libs/ui-core
+    rushx dev
+
+if you would like to create a flow, checkout the 'common/config/rush/command-line.json' and the documentation https://rushjs.io/pages/configs/command-line_json/
 
 ## Add a depedency to the Svelte App
 
@@ -67,12 +95,21 @@ Note we have used the the shorthand -p instead of --package
 
 If you need a devDep, add --dev flag
 
+## Update a dependency
+
+Same process as adding a dependency
+
 ## Common Problems
 
-### Linking of a new pakcage wont work
+### Linking of a new package doesnt work
 
 Make sure you have defined the version number in both package.json files.
 
+    rush update --full
+
+### Weird unkown situation
+
+    rush purge
     rush update --full
 
 ## Additional Info on the Monorepo tooling
@@ -87,8 +124,6 @@ Use HSL insted of HEX to define colors
 ## TODO
 
 - jest testing library svelte
-- create custom command to build watch and start storybook
-- create custom command to run app and e2e
 - use TS for everything (example I should be able to see options values for Flex component )
 - form validation with Yup
 - add angular app

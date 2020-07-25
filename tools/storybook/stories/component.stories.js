@@ -1,4 +1,4 @@
-import Component from "@scx/ui-core";
+import { Component } from "@scx/ui-core";
 
 export default {
   title: "Component",
