@@ -1,36 +1,12 @@
 <script lang="ts">
-  import Component from "@scx/ui-core";
-  export let name: string;
+  import Layout from "./components/Layout.svelte";
+  import Form from "./components/Form.svelte";
+  import VCard from "./components/VCard.svelte";
+  let QRCode = false;
+  let values;
 </script>
 
-<style>
-  main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
-  }
-
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
-    }
-  }
-</style>
-
-<main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the
-    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
-    to learn how to build Svelte apps.
-  </p>
-  <Component />
-</main>
+<Layout title="vCard Generator">
+  <Form on:createQRCode={(e) => (QRCode = e.detail)} bind:values />
+  <VCard {QRCode} {values} />
+</Layout>
