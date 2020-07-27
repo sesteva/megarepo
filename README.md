@@ -4,8 +4,21 @@ Prerequisites
 
 - Node v 12-14
 - NVM (nvm install --lts) https://github.com/nvm-sh/nvm#nvmrc
-- Yarn or NPM
+- Yarn or NPM or Pnpm
 
+## Setup - Step 1
+If you are using this project as your boilerplate, either clone the repo
+
+    git clone sesteva/megarepo company
+    cd company
+
+OR
+
+    pnpx degit sesteva/megarepo company
+
+If this is your company's repo, simply clone it.
+
+## Setup - Step 2
 Setup the correct version of Node inside the project's folder
 
     nvm use
@@ -17,11 +30,6 @@ or for example
 Install PNPM and RUSHJS
 
     yarn global add pnpm @microsfot/rush
-
-Clone the repo
-
-    git clone securonix-rush
-    cd securonix-rush
 
 Install deps
 
