@@ -119,8 +119,7 @@ Behind the scenres:
 - It will also generate an E2E project using Cypress
 - It will update rush.json to include the new app and the E2E project.
 
-Once it is done, please run `rush update` to install all 
-TODO: generate E2E app
+Once it is done, please run `rush update` to install all deps.
 
 ## Create a new sapper app
 
