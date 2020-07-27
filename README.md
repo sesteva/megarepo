@@ -7,6 +7,7 @@ Prerequisites
 - Yarn or NPM or Pnpm
 
 ## Setup - Step 1
+
 If you are using this project as your boilerplate, either clone the repo
 
     git clone sesteva/megarepo company
@@ -19,6 +20,7 @@ OR
 If this is your company's repo, simply clone it.
 
 ## Setup - Step 2
+
 Setup the correct version of Node inside the project's folder
 
     nvm use
@@ -120,6 +122,13 @@ Behind the scenres:
 - It will update rush.json to include the new app and the E2E project.
 
 Once it is done, please run `rush update` to install all deps.
+
+Until we automate this, you need ot make two small changes on your apps
+
+In package.json
+
+- update start script adding `-p 5001` , choose a unique port per app
+- update rollup config livereload to add new port per app `!production && livereload({ watch: "public", port: 35730 }),`
 
 ## Create a new sapper app
 
