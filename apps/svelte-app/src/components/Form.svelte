@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
-  import { TextInput } from "@scx/ui-core";
+  import { TextInput } from "@flia/ui-core";
   const dispatch = createEventDispatcher();
 
   const defaultValues = {

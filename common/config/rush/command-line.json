@@ -80,7 +80,7 @@
        * the custom command name.  To disable this check, set "ignoreMissingScript" to true;
        * projects with a missing definition will be skipped.
        */
-      "ignoreMissingScript": false,
+      "ignoreMissingScript": true,
 
       /**
        * When invoking shell scripts, Rush uses a heuristic to distinguish errors from warnings:

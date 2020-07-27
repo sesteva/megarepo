@@ -12,7 +12,7 @@
     "babel-loader": "^8.1.0",
     "svelte": "^3.0.0",
     "svelte-loader": "^2.13.6",
-    "@scx/ui-core": "0.0.1"
+    "@flia/ui-core": "0.0.1"
   },
   "scripts": {
     "dev": "start-storybook -p 6006",

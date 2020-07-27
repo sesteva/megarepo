@@ -1,1 +1,1 @@
-<h1>This is part of the @scx/ui-core</h1>
+<h1>This is part of the @flia/ui-core</h1>

@@ -1,5 +1,5 @@
 {
-  "name": "@scx/ui-core",
+  "name": "@flia/ui-core",
   "version": "0.0.1",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",

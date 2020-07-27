@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "sirv-cli": "^1.0.0",
-    "@scx/ui-core": "0.0.1"
+    "@flia/ui-core": "0.0.1"
   }
 }

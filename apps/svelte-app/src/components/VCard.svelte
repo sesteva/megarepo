@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Card, FlexLayout, Logo, QRCode as QR } from "@scx/ui-core";
+  import { Card, FlexLayout, Logo, QRCode as QR } from "@flia/ui-core";
 
   export let QRCode = false;
   export let values = {

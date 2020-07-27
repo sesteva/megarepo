@@ -21,7 +21,7 @@
       "reviewCategory": "apps"
     },
     {
-      "packageName": "@scx/ui-core",
+      "packageName": "@flia/ui-core",
       "projectFolder": "libs/ui-core",
       "reviewCategory": "shared"
     },
@@ -34,6 +34,11 @@
       "packageName": "svelte-app-e2e",
       "projectFolder": "e2e/svelte-app-e2e",
       "reviewCategory": "e2e"
+    },
+    {
+      "packageName": "@flia/schematics",
+      "projectFolder": "tools/schematics",
+      "reviewCategory": "tools"
     }
   ]
 }

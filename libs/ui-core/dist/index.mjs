@@ -325,7 +325,7 @@ function create_fragment(ctx) {
 	return {
 		c() {
 			h1 = element("h1");
-			h1.textContent = "This is part of the @scx/ui-core";
+			h1.textContent = "This is part of the @flia/ui-core";
 		},
 		m(target, anchor) {
 			insert(target, h1, anchor);

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Navbar } from "@scx/ui-core";
+  import { Navbar } from "@flia/ui-core";
   export let title;
 </script>
 
