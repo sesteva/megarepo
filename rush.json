@@ -18,7 +18,7 @@
     {
       "packageName": "svelte-app",
       "projectFolder": "apps/svelte-app",
-      "reviewCategory": "app"
+      "reviewCategory": "apps"
     },
     {
       "packageName": "@scx/ui-core",
@@ -34,11 +34,6 @@
       "packageName": "svelte-app-e2e",
       "projectFolder": "e2e/svelte-app-e2e",
       "reviewCategory": "e2e"
-    },
-    {
-      "packageName": "@scx/schematics",
-      "projectFolder": "tools/schematics",
-      "reviewCategory": "tools"
     }
   ]
 }

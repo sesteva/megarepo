@@ -111,6 +111,8 @@ Behind the scenres:
 - It will update rush.json to include the new app.
 - Finally, it will run `rush update`
 
+TODO: generate E2E app
+
 ## Create a new sapper app
 
 [TODO]
@@ -151,6 +153,7 @@ Use HSL insted of HEX to define colors
 
 ## TODO
 
+- choose versions when generating projects
 - jest testing library svelte
 - use TS for everything (example I should be able to see options values for Flex component )
 - form validation with Yup

@@ -3,7 +3,8 @@ dependencies:
   '@rollup/plugin-commonjs': 12.0.0_rollup@2.23.0
   '@rollup/plugin-node-resolve': 8.4.0_rollup@2.23.0
   '@rollup/plugin-typescript': 4.1.2_d508d998c8e6588bf77175f7541372d0
-  '@rush-temp/schematics': 'file:projects/schematics.tgz'
+  '@rush-temp/app': 'file:projects/app.tgz_@babel+core@7.10.5'
+  '@rush-temp/app-e2e': 'file:projects/app-e2e.tgz'
   '@rush-temp/storybook': 'file:projects/storybook.tgz_typescript@3.9.7'
   '@rush-temp/svelte-app': 'file:projects/svelte-app.tgz_@babel+core@7.10.5'
   '@rush-temp/svelte-app-e2e': 'file:projects/svelte-app-e2e.tgz'
@@ -15,7 +16,6 @@ dependencies:
   '@tsconfig/svelte': 1.0.3
   babel-loader: 8.1.0_@babel+core@7.10.5
   cypress: 4.11.0
-  jsonc: 2.0.0
   rollup: 2.23.0
   rollup-plugin-livereload: 1.3.0
   rollup-plugin-svelte: 5.2.3_rollup@2.23.0+svelte@3.24.0
@@ -4315,10 +4315,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
-  /fast-safe-stringify/2.0.7:
-    dev: false
-    resolution:
-      integrity: sha512-Utm6CdzT+6xsDk2m8S6uL8VHxNwI6Jub+e9NYTcAms28T84pTa25GJQV9j0CY0N1rM8hK4x6grpF2BQf+2qwVA==
   /fault/1.0.4:
     dependencies:
       format: 0.2.2
@@ -5745,19 +5741,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-hk/69oAeaIzchq/v3lS50PXuzn5O2ynldopMC+SWBql7J2WtdptfB9dy8Y7+Og5rPkTCpn83zTiO8FMcqlXJ/g==
-  /jsonc/2.0.0:
-    dependencies:
-      fast-safe-stringify: 2.0.7
-      graceful-fs: 4.2.4
-      mkdirp: 0.5.5
-      parse-json: 4.0.0
-      strip-bom: 4.0.0
-      strip-json-comments: 3.1.1
-    dev: false
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-B281bLCT2TRMQa+AQUQY5AGcqSOXBOKaYGP4wDzoA/+QswUfN8sODektbPEs9Baq7LGKun5jQbNFpzwGuVYKhw==
   /jsonfile/2.4.0:
     dev: false
     optionalDependencies:
@@ -8465,12 +8448,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-AuvKTrTfQNYNIctbR1K/YGTR1756GycPsg7b9bdV9Duqur4gv6aKqHXah67Z8ImS7WEz5QVcOtlfW2rZEugt6w==
-  /strip-bom/4.0.0:
-    dev: false
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==
   /strip-eof/1.0.0:
     dev: false
     engines:
@@ -8485,12 +8462,6 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
-  /strip-json-comments/3.1.1:
-    dev: false
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
   /style-loader/1.2.1_webpack@4.44.0:
     dependencies:
       loader-utils: 2.0.0
@@ -9496,14 +9467,39 @@ packages:
     dev: false
     resolution:
       integrity: sha1-x+sXyT4RLLEIb6bY5R+wZnt5pfk=
-  'file:projects/schematics.tgz':
+  'file:projects/app-e2e.tgz':
     dependencies:
-      jsonc: 2.0.0
+      cypress: 4.11.0
     dev: false
-    name: '@rush-temp/schematics'
+    name: '@rush-temp/app-e2e'
     resolution:
-      integrity: sha512-AjH0FcGeddEBCcC+gfB0H6OaHE59aGIAbiXMkyJEL1A4mFOdXKREMaBnGlGv0s7a7rXOhxXjJTFRs8ibtCkJ6g==
-      tarball: 'file:projects/schematics.tgz'
+      integrity: sha512-Xc2Xta7H9v0PadwN9+eiB7ALWxLjhO1UfhoQ3nAeeCREvwfVVRTvljxXmaIFPZhiODQhdbJoUEmQ5N3d+vRRWA==
+      tarball: 'file:projects/app-e2e.tgz'
+    version: 0.0.0
+  'file:projects/app.tgz_@babel+core@7.10.5':
+    dependencies:
+      '@rollup/plugin-commonjs': 12.0.0_rollup@2.23.0
+      '@rollup/plugin-node-resolve': 8.4.0_rollup@2.23.0
+      '@rollup/plugin-typescript': 4.1.2_d508d998c8e6588bf77175f7541372d0
+      '@tsconfig/svelte': 1.0.3
+      rollup: 2.23.0
+      rollup-plugin-livereload: 1.3.0
+      rollup-plugin-svelte: 5.2.3_rollup@2.23.0+svelte@3.24.0
+      rollup-plugin-terser: 5.3.0_rollup@2.23.0
+      sirv-cli: 1.0.3
+      svelte: 3.24.0
+      svelte-check: 0.1.55_@babel+core@7.10.5
+      svelte-preprocess: 4.0.8_abca325fd8b5e79aa458d7feb31fc7fb
+      tslib: 2.0.0
+      typescript: 3.9.7
+    dev: false
+    id: 'file:projects/app.tgz'
+    name: '@rush-temp/app'
+    peerDependencies:
+      '@babel/core': '*'
+    resolution:
+      integrity: sha512-gTtsNMW4Cy44rt5pa5Vw43eesPWEHaS4o44RBQJQhPLJGM9v0w5NXGVKDbpWhZnwpV8nt/5QlGsIiAlcW5w+yQ==
+      tarball: 'file:projects/app.tgz'
     version: 0.0.0
   'file:projects/storybook.tgz_typescript@3.9.7':
     dependencies:
@@ -9521,7 +9517,7 @@ packages:
     peerDependencies:
       typescript: '*'
     resolution:
-      integrity: sha512-WWmyIXdeLZlusrCpzUWXWsoBP3faGYEOZN3xpzfPoT33HiuhWhk+/f4Dbsh33gHevM1FvAaby6EZkq9EKi6rDg==
+      integrity: sha512-qUawiHfkaRW+lhb+lqTcN1QJmMITRtjQdR2lA2mEmM3hWY+GRifaM4cb4oqvEyZKKTOdV2B3v6o7Oyqt1m+NMQ==
       tarball: 'file:projects/storybook.tgz'
     version: 0.0.0
   'file:projects/svelte-app-e2e.tgz':
@@ -9555,7 +9551,7 @@ packages:
     peerDependencies:
       '@babel/core': '*'
     resolution:
-      integrity: sha512-l86jnTtTY9HyK+QtFHX5FHCDFQFefjmXLPlSiJ/1jj3VsPDJsTjABuG2GqctO9mujkk83vnkt7oPb1VSrPqzfw==
+      integrity: sha512-2n+1awOJx1ti8lQcsQVUTJx0ycVDxnM8RlFC1/LGTo7XuR2CMrKCX96gvifgt63sTjXldSPGteazUV9B/qgzyg==
       tarball: 'file:projects/svelte-app.tgz'
     version: 0.0.0
   'file:projects/ui-core.tgz':
@@ -9567,7 +9563,7 @@ packages:
     dev: false
     name: '@rush-temp/ui-core'
     resolution:
-      integrity: sha512-5BHf+Dj1at6Ro9FsBnY1yz52ZFHEMx4uQpYyVNFMlu1cXshYkITUPavwu4qpNMFu0qybuh6Pocwtno2jlQxwvw==
+      integrity: sha512-DfJdD4kHUKROiTMC5+UB1ayksu5jYfLk9mPDUsX3RcekfEwMM+s4qhgGvkLcF1PF8mJjupx1we3fZilC3Bw+8w==
       tarball: 'file:projects/ui-core.tgz'
     version: 0.0.0
 registry: ''
@@ -9576,7 +9572,8 @@ specifiers:
   '@rollup/plugin-commonjs': ^12.0.0
   '@rollup/plugin-node-resolve': ^8.0.0
   '@rollup/plugin-typescript': ^4.0.0
-  '@rush-temp/schematics': 'file:./projects/schematics.tgz'
+  '@rush-temp/app': 'file:./projects/app.tgz'
+  '@rush-temp/app-e2e': 'file:./projects/app-e2e.tgz'
   '@rush-temp/storybook': 'file:./projects/storybook.tgz'
   '@rush-temp/svelte-app': 'file:./projects/svelte-app.tgz'
   '@rush-temp/svelte-app-e2e': 'file:./projects/svelte-app-e2e.tgz'
@@ -9588,13 +9585,12 @@ specifiers:
   '@tsconfig/svelte': ^1.0.0
   babel-loader: ^8.1.0
   cypress: ~4.11.0
-  jsonc: ~2.0.0
   rollup: ^2.3.4
   rollup-plugin-livereload: ^1.0.0
   rollup-plugin-svelte: ^5.0.3
   rollup-plugin-terser: ^5.1.2
   sirv-cli: ^1.0.0
-  svelte: ^3.24.0
+  svelte: ^3.0.0
   svelte-check: ^0.1.0
   svelte-loader: ^2.13.6
   svelte-preprocess: ^4.0.0
