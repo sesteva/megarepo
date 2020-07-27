@@ -116,9 +116,10 @@ Behind the scenres:
 - This will create a new app inside the app's folder using the svelte/template boilerplate.
 - Then it will clean up unncessary files such as .gitignore.
 - Transform the project to support Typescript.
-- It will update rush.json to include the new app.
-- Finally, it will run `rush update`
+- It will also generate an E2E project using Cypress
+- It will update rush.json to include the new app and the E2E project.
 
+Once it is done, please run `rush update` to install all 
 TODO: generate E2E app
 
 ## Create a new sapper app
