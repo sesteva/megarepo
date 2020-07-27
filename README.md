@@ -16,7 +16,7 @@ or for example
 
 Install PNPM and RUSHJS
 
-yarn global add pnpm @microsfot/rush
+    yarn global add pnpm @microsfot/rush
 
 Clone the repo
 
@@ -98,6 +98,34 @@ If you need a devDep, add --dev flag
 ## Update a dependency
 
 Same process as adding a dependency
+
+## Create a new svelte app
+
+    rush gen-svelte --name myapp
+
+Behind the scenres:
+
+- This will create a new app inside the app's folder using the svelte/template boilerplate.
+- Then it will clean up unncessary files such as .gitignore.
+- Transform the project to support Typescript.
+- It will update rush.json to include the new app.
+- Finally, it will run `rush update`
+
+## Create a new sapper app
+
+[TODO]
+
+## Create a new angular app
+
+[TODO]
+
+## Create a new nextjs app
+
+[TODO]
+
+## Create a new svelte lib
+
+[TODO]
 
 ## Common Problems
 
