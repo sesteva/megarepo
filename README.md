@@ -123,7 +123,7 @@ Behind the scenres:
 
 Once it is done, please run `rush update` to install all deps.
 
-Until we automate this, you need ot make two small changes on your apps
+Until we automate this, you need to make two small changes on your apps
 
 In package.json
 
@@ -132,7 +132,27 @@ In package.json
 
 ## Create a new sapper app
 
-[TODO]
+    rush gen-sapper --name myapp
+
+This project already supports Typescript and Tailwind. It also has cypress already installed.
+
+Behind the scenres:
+
+- This will create a new app inside the app's folder using the sesteva/sapper-app boilerplate.
+- Then it will clean up unncessary files such as .gitignore.
+- It will update rush.json to include the new app and the E2E project.
+
+Once it is done, please run `rush update` to install all deps.
+
+Until we automate this, you need to make two small changes on your apps
+
+In package.json
+
+- update start script adding `-p 5001` , choose a unique port per app
+- update rollup config livereload to add new port per app `!production && livereload({ watch: "public", port: 35730 }),`
+
+TODO: remove cypress from template and add it like other apps via gen-e2e in the custom commands.
+This gives more flexibility on how to create these apps.
 
 ## Create a new angular app
 
@@ -174,7 +194,7 @@ Use HSL insted of HEX to define colors
 - jest testing library svelte
 - use TS for everything (example I should be able to see options values for Flex component )
 - form validation with Yup
-- add angular app
+- add angular app - add to commands as proxy to angular cli?
 - Eslint config https://www.npmjs.com/package/@rushstack/eslint-config
 - CI setup https://rushjs.io/pages/maintainer/enabling_ci_builds/
 - folder tools/templates with command to generate new component, new app

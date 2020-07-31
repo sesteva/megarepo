@@ -1,15 +1,12 @@
-const { genSvelte, genE2E, rushUpdate } = require("../../tools/schematics");
+const { genSapper, rushUpdate } = require("../../tools/schematics");
 let args = process.argv.slice(2);
 const appName = args[1];
 
 async function generate() {
-  console.log("gen-svelte process: create app with name: ", args[1]);
-  await genSvelte(appName);
-  console.log("gen-e2e process: create app-e2e with name: ", `${args[1]}-e2e`);
-  await genE2E(appName);
-  console.log("installing deps");
-
+  console.log("gen-sapper process: create app with name: ", args[1]);
+  await genSapper(appName);
   // TODO: make rush update work
+  // console.log("installing deps");
   // await rushUpdate();
   // TODO: note or automate start script to add -p 5001 5002 5003
   // TODO: note or automate update rollup config livereload to add new port  !production && livereload({ watch: "public", port: 35730 }),
