@@ -127,7 +127,7 @@ Until we automate this, you need to make two small changes on your apps
 
 In package.json
 
-- update start script adding `-p 5001` , choose a unique port per app
+- update dev script adding `-p 5001` , choose a unique port per app
 - update rollup config livereload to add new port per app `!production && livereload({ watch: "public", port: 35730 }),`
 
 ## Create a new sapper app
@@ -148,7 +148,7 @@ Until we automate this, you need to make two small changes on your apps
 
 In package.json
 
-- update start script adding `-p 5001` , choose a unique port per app
+- update dev script adding `-p 5001` , choose a unique port per app
 - update rollup config livereload to add new port per app `!production && livereload({ watch: "public", port: 35730 }),`
 
 TODO: remove cypress from template and add it like other apps via gen-e2e in the custom commands.

@@ -15,7 +15,7 @@ async function generate() {
   // TODO: note or automate update rollup config livereload to add new port  !production && livereload({ watch: "public", port: 35730 }),
   console.log("Please run `rush update` at the root of the project");
   console.log(
-    "Please update package.json's start script to add -p 5001 5002 5003"
+    "Please update package.json's dev script to add -p 5001 5002 5003"
   );
   console.log(
     'Please update update rollup config livereload to add new port  !production && livereload({ watch: "public", port: 35730 }),'
