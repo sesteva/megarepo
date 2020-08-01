@@ -12,6 +12,16 @@
       "allowWarningsInSuccessfulBuild": false
     },
     {
+      "commandKind": "bulk",
+      "name": "build",
+      "summary": "It runs the 'build' script found in each package.json across all repos",
+      "safeForSimultaneousRushProcesses": false,
+      "enableParallelism": true,
+      "ignoreDependencyOrder": true,
+      "ignoreMissingScript": true,
+      "allowWarningsInSuccessfulBuild": false
+    },
+    {
       "commandKind": "global",
       "name": "gen-svelte",
       "summary": "Generates a new svelte app",

@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../Card.svelte",
+    "../FlexLayout.svelte",
+    "../Logo.svelte",
+    "../Navbar.svelte",
+    "../QRCode.svelte"
+  ],
+  "sourcesContent": [
+    "<style>\nsection {\n  width: 600px;\n  height: 370px;\n  padding: 2rem 2rem;\n  margin: 2rem auto 0 auto;\n  border-radius: 10px;\n  position: relative;\n  color: white;\n  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.12), 0 1px 2px hsla(0, 0%, 0%, 0.24);\n  background-size: cover;\n}\n</style>\n\n<section>\n  <slot />\n</section>\n",
+    "<script>export let justify = \"left\";\nexport let align = \"baseline\";\nexport let direction = \"row\";\n</script>\n\n<style>\ndiv {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: baseline;\n  justify-content: left;\n}\n.space-between {\n  justify-content: space-between;\n}\n.start {\n  align-items: flex-start;\n}\n.center {\n  align-items: center;\n}\n.end {\n  align-items: flex-end;\n}\n.column {\n  flex-direction: column;\n}\n</style>\n\n<div\n  class:column={direction === 'column'}\n  class:space-between={justify === 'space-between'}\n  class:start={align === 'start'}\n  class:center={align === 'center'}\n  class:end={align === 'end'}>\n  <slot />\n</div>\n",
+    "<script>export let imgSrc;\nexport let imgAlt;\nexport let id;\n</script>\n\n<style>\npicture {\n  margin: 0.5rem 0.5rem 0.5rem 0;\n  position: relative;\n  top: 5px;\n}\n</style>\n\n{#if imgSrc && imgSrc.length > 0}\n  <picture>\n    <img src={imgSrc} alt={imgAlt} {id} />\n  </picture>\n{/if}\n",
+    "<script>export let title = \"Default Title\";\nlet paddingInRem = 1;\n</script>\n\n<style>\nnav {\n  width: 100%;\n  font-size: 2rem;\n  padding: var(--padding);\n  background-color: #333;\n  color: #fff;\n  text-align: center;\n}\n</style>\n\n<nav style=\"--padding:{paddingInRem}rem\">{title}</nav>\n",
+    "<script>export let values;\n$: qrString = `BEGIN:VCARD\n    VERSION:4.0\n    N:${values.name};${values.name};;;\n    FN:${values.name}\n    ORG:${values.organization}\n    TITLE:${values.jobTitle}\n    TEL;TYPE=work;VALUE=uri:${values.phone}\n    ADR;TYPE=WORK;PREF=1;LABEL=\"${values.address}\":;;${values.address}\n    EMAIL;TYPE=WORK:${values.email}\n    REV:20080424T195243Z\n    x-qq:21588891\n    END:VCARD`;\n$: imgSrc = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURI(qrString)}`;\n</script>\n\n<style>\npicture {\n  margin-top: 5rem;\n}\n</style>\n\n<picture>\n  <img src={imgSrc} alt=\"qrcode\" />\n</picture>\n"
+  ],
+  "names": [],
+  "mappings": "AACA,OAAO,eAAC,CAAC,AACP,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,OAAO,CAAE,IAAI,CAAC,IAAI,CAClB,MAAM,CAAE,IAAI,CAAC,IAAI,CAAC,CAAC,CAAC,IAAI,CACxB,aAAa,CAAE,IAAI,CACnB,QAAQ,CAAE,QAAQ,CAClB,KAAK,CAAE,KAAK,CACZ,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,IAAI,CAAC,CAC5E,eAAe,CAAE,KAAK,AACxB,CAAC;ACLD,GAAG,cAAC,CAAC,AACH,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,QAAQ,CACrB,eAAe,CAAE,IAAI,AACvB,CAAC,AACD,cAAc,cAAC,CAAC,AACd,eAAe,CAAE,aAAa,AAChC,CAAC,AACD,MAAM,cAAC,CAAC,AACN,WAAW,CAAE,UAAU,AACzB,CAAC,AACD,OAAO,cAAC,CAAC,AACP,WAAW,CAAE,MAAM,AACrB,CAAC,AACD,IAAI,cAAC,CAAC,AACJ,WAAW,CAAE,QAAQ,AACvB,CAAC,AACD,OAAO,cAAC,CAAC,AACP,cAAc,CAAE,MAAM,AACxB,CAAC;ACpBD,OAAO,cAAC,CAAC,AACP,MAAM,CAAE,MAAM,CAAC,MAAM,CAAC,MAAM,CAAC,CAAC,CAC9B,QAAQ,CAAE,QAAQ,CAClB,GAAG,CAAE,GAAG,AACV,CAAC;ACLD,GAAG,cAAC,CAAC,AACH,KAAK,CAAE,IAAI,CACX,SAAS,CAAE,IAAI,CACf,OAAO,CAAE,IAAI,SAAS,CAAC,CACvB,gBAAgB,CAAE,IAAI,CACtB,KAAK,CAAE,IAAI,CACX,UAAU,CAAE,MAAM,AACpB,CAAC;ACKD,OAAO,aAAC,CAAC,AACP,UAAU,CAAE,IAAI,AAClB,CAAC"
+}

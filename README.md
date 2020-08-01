@@ -198,3 +198,59 @@ Use HSL insted of HEX to define colors
 - Eslint config https://www.npmjs.com/package/@rushstack/eslint-config
 - CI setup https://rushjs.io/pages/maintainer/enabling_ci_builds/
 - folder tools/templates with command to generate new component, new app
+
+## Adding Storybook to a Svelte project that uses TS
+
+Follow https://storybook.js.org/docs/guides/guide-svelte/
+
+If it does not work, follow this:
+
+Add the following dependencies:
+
+- "@storybook/svelte": "^5.3.19",
+- "babel-loader": "^8.1.0",
+- "@babel/core": "^7.10.5",
+- "svelte-loader": "^2.13.6",
+- "@storybook/preset-typescript": "~3.0.0",
+- "ts-loader": "~8.0.1",
+- "fork-ts-checker-webpack-plugin": "~5.0.13",
+- "svelte-preprocess": "^4.0.0",
+
+package.json
+
+    "dev":"start-storybook"
+
+.storybook/main.js
+
+        module.exports = {
+            stories: ["../src/**/*.stories.ts"],
+            addons: ["@storybook/preset-typescript"],
+        };
+
+.storybook/webpack.config.js
+
+        const autoPreprocess = require("svelte-preprocess");
+
+        module.exports = ({ config, mode }) => {
+        const svelteLoader = config.module.rules.find(
+            (r) => r.loader && r.loader.includes("svelte-loader")
+        );
+        svelteLoader.options.preprocess = autoPreprocess({
+            less: { includePaths: ["src", "node_modules"] },
+            css: { includePaths: ["src", "node_modules"] },
+            typescript: {
+            tsconfigFile: "./tsconfig.json",
+            transpileOnly: true,
+            },
+        });
+        config.resolve.extensions.push(".ts", ".tsx");
+        return config;
+        };
+
+.tsconfig
+
+    {
+    "extends": "@tsconfig/svelte/tsconfig.json",
+    "include": ["src/**/*", "types/**/*"],
+    "exclude": ["node_modules/*", "public/*"]
+    }
