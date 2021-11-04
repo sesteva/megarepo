@@ -31,7 +31,7 @@ or for example
 
 Install PNPM and RUSHJS
 
-    yarn global add pnpm @microsfot/rush
+    yarn global add pnpm @microsoft/rush
 
 Install deps
 
